@@ -9,7 +9,7 @@ async function getPaymentByTicketId(ticketId: number) {
   });
 }
 
-type PaymentResponse = Omit<Payment, 'id' | 'createdAt' | 'updatedAt'>;
+export type PaymentResponse = Omit<Payment, 'id' | 'createdAt' | 'updatedAt'>;
 async function createPayment(payment: PaymentResponse) {
   return prisma.payment.create({
     data: payment,
