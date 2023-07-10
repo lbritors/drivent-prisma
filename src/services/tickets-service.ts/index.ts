@@ -31,6 +31,7 @@ async function createTicket(ticketTypeId: number, userId: number) {
 const ticketsService = {
   findTicket,
   getTicketType,
+  createTicket,
 };
 
 export default ticketsService;
